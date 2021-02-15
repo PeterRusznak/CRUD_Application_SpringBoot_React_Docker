@@ -1,1 +1,2 @@
-# CRUD_Application_SpringBoot_React_Docker
+https://fullstackwithpr.hashnode.dev/crud-tutorial-using-mysql-spring-boot-react-hooks-and-docker-part-1
+https://fullstackwithpr.hashnode.dev/crud-tutorial-using-mysql-spring-boot-react-hooks-and-docker-part-2
