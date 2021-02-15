@@ -1,0 +1,31 @@
+services:
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8888:8080
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 'example' # TODO: Change this      
+    volumes:
+     - "./data:/var/lib/mysql:rw"
+  backend:
+    image: backend:latest
+    restart: always
+    ports:
+      - 8080:8080
+    environment:
+    - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/customer_database?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true
+    - SPRING.DATASOURCE_USERNAME=root 
+    - SPRING.DATASOURCE_PASSWORD=example #TODO Change this
+  frontend:
+    image: frontend:latest
+    restart: always
+    ports:
+      - 3000:3000
+
+
+
+
